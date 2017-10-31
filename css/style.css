@@ -20,7 +20,6 @@ a{
 /*Header section*/
 
 header{
-	width: 100%;
 	height: 950px;
 	background: url("../Images/bg1.jpg") no-repeat center ;
 	background-size: cover; 
@@ -36,7 +35,17 @@ header> .wrapper> .navbar> .webbox> a{
 	font-style: normal;
 }
 header> .wrapper> .navbar> .navMenu{
-	width: 500px;
+    display: block;
+}
+header> .wrapper> .navbar> .navMenu> .button{
+    text-align: center;
+    display: none;
+}
+header> .wrapper> .navbar> .navMenu> .button> i{
+    width: 25px;
+    font-size: 20px;
+    color: #1ac6ff;
+    background: #ffffff;
 }
 header> .wrapper> .navbar> .navMenu> ul > li{
 	list-style: none;
@@ -123,11 +132,10 @@ header> .wrapper> .content> .photo> img{
 	height: 450px;
 }
 #content> .content_1> .wrapper .item{
-	width: 300px;
+	width: 270px;
 	height: 250px;
 }
 #content> .content_1> .wrapper .item> .text{
-	width: 270px;
 	height: 134px;
 	margin-top: 35px;
 }
@@ -311,7 +319,6 @@ header> .wrapper> .content> .photo> img{
 }
 #content> .content_5> .wrapper> .photo{
 	width: 660px;
-	height: 600px;
 }
 #content> .content_5> .wrapper> .photo>a>img{
 	width: 660px;
@@ -600,7 +607,6 @@ button.accordion.active:after {
     line-height: 1.2;
 }
 .registr> .wrapper> .registr_place{
-    height: 300px;
     width: 600px;
     float: right;
 }
@@ -713,11 +719,11 @@ button.accordion.active:after {
 
 /*footer*/
 footer{
-    height: 600px;
+    height: 620px;
     background: #151515;
 }
 footer> .wrapper{
-    height: 600px;
+    height: 620px;
 }
 footer> .wrapper> .text{
     height: 430px;
@@ -777,9 +783,293 @@ footer> .wrapper> .footer_class> .icons> a:hover{
     transition: .3s;
 }
 /*footer*/
-
-@media only screen and (max-width: 500px) {
-    header> .navbar> . {
-        width: 500px;
+@media only screen and (max-width:1170px) {
+    .wrapper {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+    header{
+        height: auto;
+        padding: 20px 0;
+    }
+    header> .wrapper> .navbar{
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 90px;
+    }
+    header> .wrapper> .navbar> .logo{
+        width: 8%;
+    }
+    header> .wrapper> .navbar> .logo> a{
+        width: 60%;
+    }
+    header> .wrapper> .navbar> .logo> a> img{
+        width: 100%;
+    }
+    header> .wrapper> .navbar> .webbox> a{
+        font-size: 25px;
+    }
+    header> .wrapper> .navbar> .button_1> a{
+        padding: 18px 30px;
+    }
+    header> .wrapper> .navbar> .navMenu> ul > li{
+        margin: 0 10px;
+    }
+    header> .wrapper> .content> .text{
+        width: 50%;
+    }
+    header> .wrapper> .content> .photo> img{
+        width: 100%;
+    }
+    #content> .content_1> .wrapper> .item{
+        width: 25%;
+    }
+    #content> .content_2> .wrapper> .text{
+        width: 50%;
+    }
+    #content> .content_2> .wrapper> .photo{
+        width: 50%;
+    }
+    #content> .content_3> .photo{
+        width: 60%;  
+    }
+    #content> .content_3> .text{
+        width: 30%;
+        height: auto;
+        position: inherit;
+    }
+    #content> .content_4> .wrapper{
+        height: auto;
+    }
+    #content> .content_4> .wrapper> .item{
+        width: calc(100%/2 - 50px);
+        padding: 5px 0;
+    }
+    #content> .content_5>  .wrapper> .text{
+        width: 40%;
+    }
+    #content> .content_5>  .wrapper> .photo{
+        width: 50%;
+    }
+    #content> .content_5>  .wrapper> .photo> a> img{
+        width: 100%;
+    }
+    #content> .content_6> .wrapper> .item{
+        width: 23%;
+    }
+    #content> .content_6> .wrapper> .item> .up> h1{
+        font-size: 1.5em;
+    }
+    #content> .content_6> .wrapper> .item> .up> p{
+        font-size: 30px;
+    }
+    .sponsors> .wrapper> .main_item> .item{
+        width: 17%;
+    }
+    .sponsors> .wrapper> .main_item> .item> img{
+        width: 100%;
+    }
+    footer> .wrapper> .text> .item{
+        width: 20%;
+    }
+    footer> .wrapper> .text> .item> h1{
+        font-size: 16px;
+    }
+    footer> .wrapper> .text> .item> p{
+        font-size: 12px;
+    }
+    footer> .wrapper> .text> .item> p> a{
+        font-size: 12px;
+    }
+    footer> .wrapper> .footer_class> .text{
+        width: 70%;
+        font-size: 12px;
+    }
+    footer> .wrapper> .footer_class> .icons{
+        width: 25%;
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width:772px){
+    header> .wrapper> .navbar{
+        justify-content: space-around;
+    }
+    header> .wrapper> .navbar> .navMenu{
+        position: absolute;
+        background: white;
+        top: 100px;
+        width: 100%;
+    }
+    header> .wrapper> .navbar> .button_1> a {
+        padding: 15px 10px;
+    }
+    header> .wrapper> .navbar> .navMenu> .button{
+        display: block;
+        position: absolute;
+        top: -30px;
+        width: 100%;
+    }
+    header> .wrapper> .navbar> .navMenu> .button> i{
+        padding: 5px;
+    }
+    header> .wrapper> .navbar> .navMenu> ul{
+        display: none;
+        text-align: center;
+    }
+    header> .wrapper> .navbar> .navMenu> ul> li> a{
+        padding: 5px 0;
+        color: black;
+    }
+    header> .wrapper> .content{
+        display: block; 
+    }
+    header> .wrapper> .content> .text{
+        width: 100%;
+        padding-bottom:15px; 
+    }
+    #content> .content_1{
+        height: auto;
+    }
+    #content> .content_1> .wrapper{
+        width: 90%;
+        height: auto;
+    }
+    #content> .content_1> .wrapper> .item{
+        width: 100%;
+        padding-top: 20px;
+    }
+    #content> .content_2> .wrapper> .text{
+        width: 100%;
+    }
+    #content> .content_2> .wrapper> .photo{
+        display: none;
+    }
+    #content> .content_3{
+        display: block;
+        height: auto;
+        padding: 30px 40px;
+    }
+    #content> .content_3> .photo{
+        display: none;
+    }
+    #content> .content_3> .text{
+        width: 100%;
+    }
+    #content> .content_4> .top> h1{
+        font-size: 30px;
+    }
+    #content> .content_4> .wrapper> .item{
+        width: 100%;
+        padding: 10px 0;
+    }
+    #content> .content_5{
+        height: auto;
+    }
+    #content> .content_5> .wrapper{
+        display: block;
+        height: auto;
+    }
+    #content> .content_5> .wrapper> .text{
+        width: 100%;
+        padding: 20px 0;
+    }
+    #content> .content_5> .wrapper> .text> h1{
+        font-size: 30px;
+    }
+    #content> .content_5> .wrapper> .text> p{
+        font-size: 20px;
+    }
+    #content> .content_5> .wrapper> .photo{
+        width: 100%;
+    }
+    #content> .content_6{
+        height: auto;
+    }
+    #content> .content_6> .top{
+        height: auto;
+    }
+    #content> .content_6> .wrapper{
+        height: auto;
+        display: block;
+        padding: 20px;
+    }
+    #content> .content_6> .wrapper> .item{
+        width: 100%;
+        margin: 20px 0;
+    }
+    #content> .content_7{
+        height: auto;
+        padding: 20px 0;
+    }
+    #content> .content_7> .wrapper{
+        height: auto;
+    }
+    #content> .content_7> .wrapper> .item> .photo> img{
+        width: 100%;
+    }
+    #content> .content_7> .wrapper> .item> .text{
+        width: 50%;
+        height: auto;
+    }
+    #content> .main_accordion{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .registr{
+        height: auto;
+        padding: 25px 0;
+    }
+    .registr> .wrapper> .registr_place{
+        float: none;
+        width: 80%;
+    }
+    .free_trial{
+        height: auto;
+        padding: 30px 0;
+    }
+    .free_trial> .text{
+        position: inherit;
+    }
+    .free_trial> .text> h1{
+        font-size: 34px;
+    }
+    .free_trial> .text> p{
+        font-size: 28px;
+    }
+    .free_trial> .text> a{
+        padding: 18px 30px;
+    }
+    footer{
+        height: auto;
+        padding: 30px 0;
+    }
+    footer> .wrapper{
+        height: auto;
+    }
+    footer> .wrapper> .text{
+        height: auto;
+        display: block;
+    }
+    footer> .wrapper> .text> .item{
+        width: 100%;
+        height: auto;
+    }
+    footer> .wrapper> .footer_class{
+        display: block;
+    }
+    footer> .wrapper> .footer_class> .text{
+        margin: 20px 0;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    footer> .wrapper> .footer_class> .icons{
+        width: 100%;
+        display: block;
+    }
+    footer> .wrapper> .footer_class> .icons> a{
+        margin: 0 5px;
     }
 }
